@@ -132,6 +132,12 @@ class Naxt {
     p(props, ...children) {
         return this._construct("p", props, ...children);
     }
+    select(props, ...children) {
+        return this._construct("select", props, ...children);
+    }
+    option(props, ...children) {
+        return this._construct("option", props, ...children);
+    }
     button(props, ...children) {
         return this._construct("button", props, ...children);
     }
