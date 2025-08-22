@@ -173,4 +173,4 @@ class Naxt {
     }
 }
 
-export default Naxt;
+window.$naxt = Naxt
