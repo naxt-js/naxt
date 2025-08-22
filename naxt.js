@@ -123,6 +123,12 @@ class Naxt {
     h2(props, ...children) {
         return this._construct("h2", props, ...children);
     }
+    h3(props, ...children) {
+        return this._construct("h4", props, ...children);
+    }
+    h4(props, ...children) {
+        return this._construct("h4", props, ...children);
+    }
     p(props, ...children) {
         return this._construct("p", props, ...children);
     }
@@ -170,6 +176,9 @@ class Naxt {
     }
     table(props, ...children) {
         return this._construct("table", props, ...children);
+    }
+    canvas(props, ...children) {
+        return this._construct("table", canvas, ...children);
     }
 }
 
