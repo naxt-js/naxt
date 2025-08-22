@@ -184,7 +184,7 @@ class Naxt {
         return this._construct("table", props, ...children);
     }
     canvas(props, ...children) {
-        return this._construct("table", canvas, ...children);
+        return this._construct("canvas", props, ...children);
     }
 }
 
