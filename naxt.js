@@ -4,6 +4,11 @@ class Naxt {
         this.state = {};
         this.globals = {};
         this.defaultRender = null;
+
+        const elements = ["div", "h1", "h2", "h3", "h4", "p", "input", "select", "option", "ul", "li", "nav", "a", "button", "textarea", "span", "pre", "th", "tr", "td", "thread", "tbody", "table", "canvas", "form"];
+        for (const element of elements) {
+            this[element] = (...args) => this._construct(element, ...args);
+        }
     }
 
     _construct(type, props = {}, ...children) {
@@ -112,79 +117,6 @@ class Naxt {
                 } catch {}
             }
         });
-    }
-
-    div(props, ...children) {
-        return this._construct("div", props, ...children);
-    }
-    h1(props, ...children) {
-        return this._construct("h1", props, ...children);
-    }
-    h2(props, ...children) {
-        return this._construct("h2", props, ...children);
-    }
-    h3(props, ...children) {
-        return this._construct("h4", props, ...children);
-    }
-    h4(props, ...children) {
-        return this._construct("h4", props, ...children);
-    }
-    p(props, ...children) {
-        return this._construct("p", props, ...children);
-    }
-    select(props, ...children) {
-        return this._construct("select", props, ...children);
-    }
-    option(props, ...children) {
-        return this._construct("option", props, ...children);
-    }
-    button(props, ...children) {
-        return this._construct("button", props, ...children);
-    }
-    ul(props, ...children) {
-        return this._construct("ul", props, ...children);
-    }
-    li(props, ...children) {
-        return this._construct("li", props, ...children);
-    }
-    nav(props, ...children) {
-        return this._construct("nav", props, ...children);
-    }
-    a(props, ...children) {
-        return this._construct("a", props, ...children);
-    }
-    input(props, ...children) {
-        return this._construct("input", props, ...children);
-    }
-    textarea(props, ...children) {
-        return this._construct("textarea", props, ...children);
-    }
-    span(props, ...children) {
-        return this._construct("span", props, ...children);
-    }
-    pre(props, ...children) {
-        return this._construct("pre", props, ...children);
-    }
-    th(props, ...children) {
-        return this._construct("th", props, ...children);
-    }
-    tr(props, ...children) {
-        return this._construct("tr", props, ...children);
-    }
-    td(props, ...children) {
-        return this._construct("td", props, ...children);
-    }
-    thead(props, ...children) {
-        return this._construct("thead", props, ...children);
-    }
-    tbody(props, ...children) {
-        return this._construct("tbody", props, ...children);
-    }
-    table(props, ...children) {
-        return this._construct("table", props, ...children);
-    }
-    canvas(props, ...children) {
-        return this._construct("canvas", props, ...children);
     }
 }
 
