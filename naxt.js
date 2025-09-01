@@ -5,7 +5,7 @@ class Naxt {
         this.globals = {};
         this.defaultRender = null;
 
-        const elements = ["div", "h1", "h2", "h3", "h4", "p", "input", "select", "option", "ul", "li", "nav", "a", "button", "textarea", "span", "pre", "th", "tr", "td", "thread", "tbody", "table", "canvas", "form"];
+        const elements = ["div", "h1", "h2", "h3", "h4", "p", "input", "select", "option", "ul", "li", "nav", "a", "button", "img", "textarea", "span", "pre", "th", "tr", "td", "thread", "tbody", "table", "canvas", "form"];
         for (const element of elements) {
             this[element] = (...args) => this._construct(element, ...args);
         }
