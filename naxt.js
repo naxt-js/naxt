@@ -75,6 +75,13 @@ class Naxt {
             }
             element.content = description;
         },
+        icon: (href) => {
+            let link = document.querySelector("link[rel*='icon']") || document.createElement("link");
+            link.type = "image/png";
+            link.rel = "icon";
+            link.href = href;
+            document.head.appendChild(link);
+      },
     };
 
     render(componentFn) {
