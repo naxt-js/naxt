@@ -1,5 +1,5 @@
 class Naxt {
-    constructor(root = document.getElementById("app")) {
+    constructor(root = document.querySelector("body")) {
         this.root = root;
         this.state = {};
         this.globals = {};
